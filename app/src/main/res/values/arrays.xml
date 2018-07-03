@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qingjialeixing">
+        <item>事假</item>
+        <item>病假</item>
+    </string-array>
+
+    <string-array name="xiaoqu">
+        <item>南校区</item>
+        <item>北校区</item>
+        <item>东校区</item>
+    </string-array>
+
+    <string-array name="sushelou">
+        <item>1号楼</item>
+        <item>2号楼</item>
+        <item>3号楼</item>
+        <item>4号楼</item>
+        <item>5号楼</item>
+        <item>6号楼</item>
+        <item>7号楼</item>
+        <item>8号楼</item>
+        <item>9号楼</item>
+    </string-array>
+    <string-array name="louceng">
+        <item>一楼</item>
+        <item>二楼</item>
+        <item>三楼</item>
+        <item>四楼</item>
+        <item>五楼</item>
+    </string-array>
+    <string-array name="sushe">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+    </string-array>
+
+
+
+
+</resources>

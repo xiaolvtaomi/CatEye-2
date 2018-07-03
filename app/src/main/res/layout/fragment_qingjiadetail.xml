@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:textedit="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/layout_normal_back_title"/>
+
+
+    <com.cicinnus.cateye.view.TextTextView
+        android:id="@+id/ttv_person"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="请假人"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_text="屈艺凡"
+        textedit:right_color="@color/text_blue"
+        />
+
+
+    <com.cicinnus.cateye.view.TextTextView
+        android:id="@+id/ttv_reason"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="请假事由"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_text="生病看医生"
+        textedit:right_color="@color/text_blue"
+        />
+
+    <com.cicinnus.cateye.view.TextTextView
+        android:id="@+id/ttv_begin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="请假时间"
+        textedit:nesscery="false"
+        textedit:right_text="2017-12-29 8:00"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        />
+    <com.cicinnus.cateye.view.TextTextView
+        android:id="@+id/ttv_end"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="结束时间"
+        textedit:nesscery="false"
+        textedit:right_text="2017-12-29 9:00"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        />
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        >
+        <EditText
+            android:id="@+id/et_reply"
+            style="@style/textedit_edit"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="说点审核意见吧"
+            android:text=""
+            />
+        <ImageView
+            android:id="@+id/iv_accept"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_accept"
+            android:layout_marginRight="12dp"
+            />
+        <ImageView
+            android:id="@+id/iv_reject"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_reject"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

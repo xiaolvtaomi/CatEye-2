@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_circle"
+    android:layout_margin="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="屈艺凡的请假条"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:text="正在审批"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_banji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_below="@+id/tv_title"
+        android:text="＊ 班级：三年二班"
+        android:textColor="@color/text_gray_deep"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_below="@+id/tv_banji"
+        android:text="＊ 请假时间：2018-6-17 8:00 至 2018-6-20 21:00"
+        android:textColor="@color/text_gray_deep"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_below="@+id/tv_time"
+        android:text="＊ 请假事由：生病看医生"
+        android:textColor="@color/text_gray_deep"
+        android:layout_marginBottom="12dp"
+        android:textSize="@dimen/sp_12" />
+
+
+</RelativeLayout>

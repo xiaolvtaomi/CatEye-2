@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+    <!--android:background="#eeeeee"-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#2b90cf" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/round_corner_bg"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/loginedit"
+            android:hint="姓名"
+            android:layout_marginTop="40dp"
+            />
+
+        <EditText
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+            android:hint="身份证" />
+
+        <EditText
+            android:id="@+id/et_account"
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+
+            android:hint="录取通知书编号" />
+
+        <EditText
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+
+            android:hint="邮编" />
+
+        <EditText
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+
+            android:hint="家庭住址" />
+
+        <EditText
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+            android:inputType="numberPassword"
+            android:id="@+id/et_pw"
+            android:hint="密码" />
+
+        <EditText
+            style="@style/loginedit"
+            android:layout_marginTop="10dp"
+            android:inputType="numberPassword"
+            android:hint="确认密码" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <!--android:background="#f7f7f7"-->
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/login_btn_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="注册"
+                android:textColor="@android:color/white"
+                android:onClick="clickRegist"
+
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="登陆"
+        android:onClick="clickLogin"
+        android:textColor="#eeeeee"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/ic_login"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_alignTop="@+id/ll_login_pane"
+        android:layout_marginTop="-36dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--<com.tq.view.OwlView-->
+    <!--android:id="@+id/owl_view"-->
+    <!--android:layout_above="@id/ll_login_pane"-->
+    <!--android:layout_width="175dp"-->
+    <!--android:layout_height="107dp"-->
+    <!--android:layout_centerHorizontal="true"/>-->
+
+
+</RelativeLayout>

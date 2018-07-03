@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_service_normal"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/banner_red"
+        android:layout_alignTop="@+id/tv_service"
+        android:layout_alignRight="@+id/tv_service"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>

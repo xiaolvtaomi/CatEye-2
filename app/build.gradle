@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.cicinnus.cateye"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk { //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters  "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64" }
+    }
+    signingConfigs {
+        config {
+            storeFile file("mykey.jks")
+            storePassword 'cicinnus1'
+            keyAlias "cicinnus"
+            keyPassword 'cicinnus1'
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+    }
+
+
+
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.cicinnus.greendao.gen'
+        targetGenDir 'src/main/java'
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+    repositories {
+//        jcenter()
+        maven {
+            url 'https://dl.bintray.com/wangyuwei/maven'
+        }
+        maven { url 'https://jitpack.io' }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //SupportDesign
+    compile rootProject.ext.dependencies["design"]
+    //AppCompat-v7
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    //CardView
+    compile rootProject.ext.dependencies["cardview-v7"]
+    //RecyclerView
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    //GridLayout
+    compile rootProject.ext.dependencies["gridlayout-v7"]
+    //ButterKnife
+    //    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //BaseRecyclerViewAdapterHelper
+    compile rootProject.ext.dependencies["BRVAH"]
+    //Glide图片加载
+    compile rootProject.ext.dependencies["glide"]
+    //GreenDao3
+    compile rootProject.ext.dependencies["GreenDao"]
+    //日志
+    compile 'com.orhanobut:logger:1.15'
+    //内存泄漏检测
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //流式布局
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    //jCPlayer
+    //    compile 'fm.jiecao:jiecaovideoplayer:5.4'
+    //RxBus
+    compile 'com.hwangjr.rxbus:rxbus:2.0.0-beta'
+    //高德定位
+    //    compile 'com.amap.api:location:3.4.0'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation project(':rrmlib')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation 'com.github.arcadefire:nice-spinner:1.3.4'
+
+    compile 'me.wangyuwei:banner:1.0.9'
+//    compile 'com.qmuiteam:qmui:1.1.3'
+    compile 'com.github.codbking:PickTime:v1.0.1'
+}

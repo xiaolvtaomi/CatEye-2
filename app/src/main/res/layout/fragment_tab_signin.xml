@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+
+
+    <com.cicinnus.cateye.module.more.MySlidingDrawer
+        android:id="@+id/slidingDrawer_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateOnClick="true"
+        android:layout_alignParentBottom="true"
+        android:content="@+id/ll_sliding_sign"
+        android:handle="@+id/ll_signers_container"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_signers_container"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="#ffffffff"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_signers_arrow"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:layout_marginRight="12.0dip"
+                android:src="@drawable/common_pullrefresh_droparrow_up" />
+
+            <TextView
+                android:id="@+id/tv_signers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已签到(0)人"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sliding_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/gv_sign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                android:gravity="center"
+                android:listSelector="#000000"
+                android:numColumns="4" >
+            </GridView>
+        </LinearLayout>
+    </com.cicinnus.cateye.module.more.MySlidingDrawer>
+
+    <TextView
+        android:id="@+id/tv_signin"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_above="@+id/flag"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/btn_signin"
+        android:gravity="center"
+        android:text="考勤"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/flag"
+        android:layout_width="0dip"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mapview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_signin"
+        android:layout_alignParentTop="true"
+        >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+        
+        <ImageView
+            android:id="@+id/iv_location_back"
+            android:layout_width="100dip"
+            android:layout_height="48dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dip"
+            android:padding="8dip"
+            android:src="@drawable/ic_sign_backlocation"
+            />
+
+        <LinearLayout
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="15dip"
+            android:background="@drawable/sign_clock_mainview_bg"
+            android:orientation="vertical"
+            android:paddingBottom="2dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="2dip"
+            android:visibility="gone"
+             >
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="迟到倒计时"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <com.cicinnus.cateye.module.more.CustomDigitalClock
+                android:id="@+id/late_clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!--
+        <LinearLayout
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/sign_clock_mainview_bg"
+            android:orientation="vertical"
+            android:paddingBottom="2dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="2dip" >
+
+        </LinearLayout>
+        -->
+
+        <TextView
+            android:id="@+id/tv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_marginTop="10dip"
+            android:textColor="#303030"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/common_title"/>
+
+
+</RelativeLayout>

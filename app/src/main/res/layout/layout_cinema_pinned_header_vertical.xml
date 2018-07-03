@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:textedit="http://schemas.android.com/apk/res-auto"
+    android:background="@color/vpi__background_holo_light"
+    android:orientation="vertical">
+
+    <com.cicinnus.cateye.view.TextSpinnerView
+        android:id="@+id/tsv_xiaoqu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="校区"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        textedit:liststr="@array/xiaoqu"
+        />
+
+    <com.cicinnus.cateye.view.TextSpinnerView
+        android:id="@+id/tsv_sushelou"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="宿舍楼"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        textedit:liststr="@array/sushelou"
+        android:layout_marginTop="1dp"
+        />
+
+    <com.cicinnus.cateye.view.TextSpinnerView
+        android:id="@+id/tsv_louceng"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="楼层"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        textedit:liststr="@array/louceng"
+        android:layout_marginTop="1dp"
+        />
+
+    <com.cicinnus.cateye.view.TextSpinnerView
+        android:id="@+id/tsv_sushe"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        textedit:left_text="宿舍号"
+        textedit:nesscery="false"
+        textedit:right_hint=""
+        textedit:right_color="@color/text_blue"
+        textedit:liststr="@array/sushe"
+        android:layout_marginTop="1dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_chuangpu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10" />
+
+
+</LinearLayout>
